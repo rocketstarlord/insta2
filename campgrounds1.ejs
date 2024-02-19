@@ -1,0 +1,124 @@
+
+
+<% include("partials1/header1") %>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"></link>
+
+
+<style>
+
+  .row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.row1 {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+ .column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+
+
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse nav-right" id="navbarNav">
+    <ul class="navbar-nav">
+    <% if(!currentUser){ %>
+      <li class="nav-item active">
+        <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/register">Sign up</a>
+      </li>
+     <% }else{ %>
+     <li>Signed in As <%= currentUser.username %></li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+     <% } %>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<h4> <%= currentUser %> </h4>
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>Welcome To Gallery </h1>
+      <p> </p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add  </a>
+        </p>
+    </div>
+  </header>
+   
+    
+  
+
+</div>
+<% if(success && success.length>0){ %>
+  <div class="container">
+    <div class="alert alert-success" role="alert">
+      <%= success %>
+    </div>
+  </div>
+<% } %>
+<div class="row1  "align="center">
+        
+        <% campgrounds.forEach(function(camp){ %>
+          <div class="column col-md-3">
+
+                    <div class="card "style="width:18rem; display:inline-block;">
+                    <img src="<%= camp.image%>" class="card-img-top ">
+                  <div class="card-body">
+                        <%= camp.name %>
+                        <p><a href="/campgrounds/<%= camp._id%>" class="btn btn-primary">More Info</a></p>
+                     
+                  </div>
+                </div>
+          
+        </div>
+        <% }) %>
+    </div>
+<script>
+
+
+
+  var elements = document.getElementsByClassName("column");
+
+function four() {
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "25%";  // IE10
+        elements[i].style.flex = "25%";
+      }
+    }
+    var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+  
+</script>
+ <% include("partials1/footer") %>
