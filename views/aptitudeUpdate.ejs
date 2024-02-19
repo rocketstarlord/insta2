@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<title> add Mcq Question</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<link rel="stylesheet" type ="text/css" href="/stylesheets/app.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+   
+	</head>
+	<body>
+		
+			<div id="landing-header">
+	<nav class="navbar navbar-light">
+  <button class="nav-link btn">Blog</button>
+ 
+    <button class="btn  my-2 my-sm-0" type="submit">Sign In</button>
+    
+  
+</nav>
+</div>
+
+<h1 style="top-padding:50%;text-align:center">New Mcq Question</h1>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Title</h5>
+        <p class="card-text"></p>
+<form action="/apti" method="POST">
+
+        
+  			<div class="form-group">
+    			<!-- <label for="exampleInputEmail1">Title Here</label> -->
+    			<input type="text" name="apti[Questions]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    			<small id="emailHelp" class="form-text text-muted"></small>
+  			</div>
+		
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Option1</h5>
+        <p class="card-text"></p>
+        
+  			<div class="form-group">
+    			<!-- <label for="exampleInputEmail1">description here</label> -->
+    			<input type="text" name="apti[option1]"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    			<small id="emailHelp" class="form-text text-muted"></small>
+  			</div>
+		
+      </div>
+
+    </div>
+<div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">option2</h5>
+        <p class="card-text"></p>
+        
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">description here</label> -->
+          <input type="text" name="apti[option2]"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+    
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">option3</h5>
+        <p class="card-text"></p>
+        
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">description here</label> -->
+          <input type="text" name="apti[option3]"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+    
+      </div>
+
+    </div>
+
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Option4</h5>
+        <p class="card-text"></p>
+        
+  			<div class="form-group">
+    			<!-- <label for="exampleInputEmail1">description here</label> -->
+    			<input type="text" name="apti[option4]"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    			<small id="emailHelp" class="form-text text-muted"></small>
+  			</div>
+		
+        
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Correct Option</h5>
+        <p class="card-text"></p>
+        
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">description here</label> -->
+          <input type="text" name="apti[correctOpt]"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+    
+        
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+	<div style="text-align: center;padding-top:100px">
+		<button type ="submit"style="color:orange;"class="btn btn-primary">Add</button>
+	</div>
+</form>

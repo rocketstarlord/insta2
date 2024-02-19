@@ -1,0 +1,61 @@
+<style type="text/css">
+  .container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+ 
+</style>
+
+
+
+<div class="container">
+  <div class="box">
+    <img src="https://scontent.fnag4-1.fna.fbcdn.net/v/t31.18172-8/27628551_1417780298351106_8782738387829675698_o.jpg?_nc_cat=105&ccb=1-3&_nc_sid=6e5ad9&_nc_ohc=di0rHanizEYAX9fnTMY&_nc_oc=AQntNKZgx-clVjAj0xonkAfT8-2vLLeQ6tzyGFcLqjmsbVyAJfiLJRRvj4OYOG0nykzp2EreI3uao8P3hO1WwLHy&_nc_ht=scontent.fnag4-1.fna&oh=af48b9d29f59e67974a231e1a86841d0&oe=60B2C71E">
+    <span></span>
+  </div>
+  <div class="box">
+    <img src="https://scontent.fnag4-1.fna.fbcdn.net/v/t1.6435-9/87225244_1253306034870103_3396514009451593728_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=973b4a&_nc_ohc=655-DVkbgSUAX8AdjIy&_nc_ht=scontent.fnag4-1.fna&oh=b810db5cec7c643ae3d428a3172430c0&oe=60B1EF29">
+    <span></span>
+  </div>
+  <div class="box">
+    <img src="https://scontent.fnag4-1.fna.fbcdn.net/v/t1.6435-9/87176250_1253306088203431_1387645921214332928_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=973b4a&_nc_ohc=-N2hX4Hqid4AX8UAXZ5&_nc_ht=scontent.fnag4-1.fna&oh=99e262169cf93a56a3a37095586e1284&oe=60B201A2">
+    <span></span>
+  </div>
+  <div class="box">
+    <img src="https://scontent.fnag4-1.fna.fbcdn.net/v/t1.6435-9/87721004_1253306454870061_2243064580349624320_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=973b4a&_nc_ohc=04NX7GwacHIAX_tXY8M&_nc_ht=scontent.fnag4-1.fna&oh=7b170f4b3f96296e74d2aeee43d807a6&oe=60B187F5">
+    <span></span>
+  </div>
+</div>

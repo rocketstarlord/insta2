@@ -1,0 +1,93 @@
+<% include("partials1/header1") %>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"></link>
+ <link rel="stylesheet" href="/stylesheets/main.css">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="/">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse nav-right" id="navbarNav">
+    <ul class="navbar-nav">
+    <% if(!currentUser){ %>
+      <li class="nav-item active">
+        <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/register">Sign up</a>
+      </li>
+     <% }else{ %>
+     <li>Signed in As <%= currentUser.username %></li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+     <% } %>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<p class="lead">SCOoP</p>
+			<div class="list-groups">
+				<li class="list-groups-item active">Info 1</li>
+				<li class="list-groups-item ">Info 2</li>
+				<li class="list-groups-items">Info 3</li>
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="thumbnail">
+				 <img class="img-responsive "src="<%=campgrounds.image%>">
+				 <div class="caption-full">
+				 	<h4 class="text-right"></h4>
+				 	<h4><a><%=campgrounds.name %></a></h4>
+				 	<p><em>Submitted by <%= campgrounds.author.username %></em></p>
+				 	<% if(currentUser && campgrounds.author.id.equals(currentUser._id)){%>
+							<a href="/campgrounds/<%= campgrounds._id %>/edit"><button class="btn btn-warning">Edit</button></a>
+						 	<form action="/campgrounds/<%= campgrounds._id %>?_method=DELETE" method="POST">
+						 		<button class="btn btn-danger">Delete</button>
+						 	</form>
+						 <%	} %>
+				 	<p><%=campgrounds.description %></p>
+				 </div>
+
+			</div>
+		
+			<div class="well">
+				<div class="text-right">
+					<p><a class="btn btn-success" href="/campgrounds/<%= campgrounds._id %>/comments">Add a New comment</a></p>
+				</div>
+				<hr>
+			 		<% campgrounds.comments.forEach(function(comment){ %>
+			 		<div class="row">
+			 			<div class="col-md-12">
+			 			<%= comment.author.username %>
+			 			<h5 class="text-right">10 days ago</h5>
+			 			<p>
+			 			<%= comment.text %>
+			 			</p>
+			 			<% if(currentUser&&comment.author.id.equals(currentUser._id)){ %>
+			 			<a class="btn btn-danger"href="/campgrounds/<%=campgrounds._id%>/comments/<%=comment._id%>/edit">edit</a>
+			 			<form action="/campgrounds/<%=campgrounds._id%>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+			 				<button class="btn btn-danger">Delete</button>
+			 			</form>
+			 			<% } %>
+						<% }) %>
+			 		</div>
+
+			</div>
+ 				
+			
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+ <% include("partials1/footer") %>

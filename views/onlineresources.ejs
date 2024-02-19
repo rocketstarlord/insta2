@@ -1,0 +1,167 @@
+
+<style type="text/css">
+  
+body {
+  font-family: 'Montserrat';
+  font-style: Italic;
+  background-image: url("https://images.unsplash.com/photo-1603969072881-b0fc7f3d77d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding:20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  font-size:20px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    flex: 46%;
+    max-width: 46%;
+  }
+}
+
+.card {
+  opacity: 0.8;
+  filter: alpha(opacity=60);
+}
+.card-title {
+  font-weight:bold;
+  text-align: center;
+}
+.card-text {
+  text-align: justify;
+}
+
+.modal-header {
+  background-image: linear-gradient(#7FDBFF,white);
+}
+.modal-footer {
+  background-image: linear-gradient(white,#7FDBFF);
+}
+#left-panel-link {
+  position: relative;
+  left: 5%;
+  background-color: #125666;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#right-panel-link {
+  position: absolute;
+  right: 10%;
+  background-color: #125666;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.sep {
+  height: 25px;
+}
+</style>
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,700&display=swap" rel="stylesheet"> 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+  
+    <!-- Header -->
+  <div class="header">
+    <h1 style="font-family: 'Poppins', sans-serif; font-size: 50px;color: white;">Online Resources
+    </h1>
+  </div>
+
+  <!-- Photo Grid -->
+      <!-- Row 1 -->
+  <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="" alt="">
+        <div class="card-body">
+          <h1 class="card-title">2nd Year</h1>
+          <ul class="list-group">
+            <a href="/2ndyearsubjectlist"><li class="list-group-item list-group-item-success"><i class="fa fa-briefcase"style="font-size:20px;"></i>  Subjects </li></a>
+            <a href="/2ndYearReferenceBooks"><li class="list-group-item list-group-item-success"><i class="fa fa-user"style="font-size:20px;"></i>   Reference Books </li></a>
+          <!--   <li class="list-group-item list-group-item-success"><i class="fa fa-map-marker"style="font-size:20px;"></i>   Location</li>
+            <li class="list-group-item list-group-item-success"><i class="fa fa-clock-o"style="font-size:20px;"></i>   Duration</li>
+            <li class="list-group-item list-group-item-success"><i class="fa fa-inr"style="font-size:20px;"></i>   Cost</li> -->
+          </ul>
+          
+        </div>
+        <div class="card-footer">
+          <!-- <button type="button" class="btn" id="left-panel-link" >Register</button>
+          <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal1" id="right-panel-link">
+  Learn More
+</button> -->
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="" alt="">
+        <div class="card-body">
+          <h1 class="card-title">3rd Year</h1>
+          <ul class="list-group">
+            <a href="/3rdyearsubjectlist"><li class="list-group-item list-group-item-success"><i class="fa fa-briefcase"style="font-size:20px;"></i> Subjects </li></a>
+            <a href="/3rdYearReferenceBooks"><li class="list-group-item list-group-item-success"><i class="fa fa-user"style="font-size:20px;"></i> Reference Books</li></a>
+            <!-- <li class="list-group-item list-group-item-success"><i class="fa fa-map-marker"style="font-size:20px;"></i>   Location</li>
+            <li class="list-group-item list-group-item-success"><i class="fa fa-clock-o"style="font-size:20px;"></i>   Duration</li>
+            <li class="list-group-item list-group-item-success"><i class="fa fa-inr"style="font-size:20px;"></i>   Cost</li> -->
+          </ul>
+          
+        </div>
+        <div class="card-footer">
+        <!--   <button type="button" class="btn" id="left-panel-link" >Register</button>
+          <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal2" id="right-panel-link">
+  Learn More
+</button> -->
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="" alt="">
+        <div class="card-body">
+          <h1 class="card-title">4th Year</h1>
+          <ul class="list-group">
+            <a href="/4thyearsubjectlist"><li class="list-group-item list-group-item-success"><i class="fa fa-briefcase"style="font-size:20px;"></i>  Subjects </li></a>
+            <a href="/4thYearReferenceBooks"><li class="list-group-item list-group-item-success"><i class="fa fa-user"style="font-size:20px;"></i>   Reference Books </li></a>
+            <!-- <li class="list-group-item list-group-item-success"><i class="fa fa-map-marker"style="font-size:20px;"></i>   Location</li>
+            <li class="list-group-item list-group-item-success"><i class="fa fa-clock-o"style="font-size:20px;"></i>   Duration</li>
+            <li class="list-group-item list-group-item-success"><i class="fa fa-inr"style="font-size:20px;"></i>   Cost</li> -->
+          </ul>
+          
+        </div>
+        <div class="card-footer">
+          <!-- <button type="button" class="btn" id="left-panel-link" >Register</button>
+          <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal3" id="right-panel-link">
+  Learn More
+</button> -->
+        </div>
+      </div>
+    </div>
+   
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+
+</html>

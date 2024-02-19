@@ -1,0 +1,32 @@
+<% include("partials1/header1") %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"></link>
+<h1 style="text-align:center;"> New form to add in a <%= campground.name %></h1>
+
+	
+
+
+<div class="container "style="text-align:center;">
+<div class="row">
+
+<div style="width:30%; margin:25px auto;"> 
+	  <div class="form-group">
+<form action="/campgrounds/<%= campground._id %>/comments" method="POST">
+
+		    <label for="exampleInput2">Enter your comment here</label>
+		    <input type="text" class="form-control" id="exampleInput2" aria-describedby="emailHelp" 
+		    name="comment[text]"placeholder="Enter your comment here">
+		    <small id="emailHelp" class="form-text text-muted">We'll  share your comments with everyone  else.</small>
+		  </div>
+		  
+		  
+		  <div class="form-check">
+		    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+		    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+		
+		  <button type="submit" class="btn btn-primary btn-block">Submit</button>
+
+</form>	    </div>
+ </div>
+	   </div>
+  </div>
+<% include("partials1/footer") %>

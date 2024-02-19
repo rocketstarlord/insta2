@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>scoop admin page</title>
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<link rel="stylesheet" type ="text/css" href="/stylesheets/app.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+   
+	</head>
+	<body>
+		
+			<div id="landing-header">
+	<nav class="navbar navbar-light">
+  <button class="nav-link btn">Blog</button>
+ 
+    <button class="btn  my-2 my-sm-0" type="submit">Sign In</button>
+    
+  
+</nav>
+</div>
+
+<h1 style="top-padding:50%;text-align:center">Admin Page</h1>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Update in main heading</h5>
+        <p class="card-text"></p>
+<form action="/indexUpdate/<%=index._id%>?_method=PUT" method="POST">
+
+
+        
+  			<div class="form-group">
+    			<!-- <label for="exampleInputEmail1">Title Here</label> -->
+    			<input type="text" name="indexUpdate[info1]" value="<%=index.info1%>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    			<small id="emailHelp" class="form-text text-muted"></small>
+<h5>title1</h5>
+<input type="text" name="indexUpdate[title1]" value="<%=index.title1%>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+<h5>update image 1</h5>
+<input type="text" name="indexUpdate[subtitle1]" value="<%=index.subtitle1%>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+<h5>title2</h5>
+<input type="text" name="indexUpdate[title2]" value="<%=index.title2%>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+<h5>update in image2</h5>
+<input type="text" name="indexUpdate[subtitle2]" value="<%=index.subtitle2%>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+<h5>title3</h5>
+<input type="text" name="indexUpdate[title3]" value="<%=index.title3%>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+          <h5>update image 3</h5>
+<input type="text" name="indexUpdate[subtitle3]" value="<%=index.subtitle3%>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+           <h5>update Heading1</h5>
+<input type="text" name="indexUpdate[updateHeading1]" value="<%=index.updateHeading1%>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+           <h5>update 1</h5>
+<input type="text" name="indexUpdate[update1]" value="<%=index.update1%>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+           <h5>update1 image</h5>
+<input type="text" name="indexUpdate[updateImage1]" value="<%=index.updateImage1%>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+  			</div>
+		
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">update in subheading</h5>
+        <p class="card-text"></p>
+        
+  			<div class="form-group">
+    			<!-- <label for="exampleInputEmail1">description here</label> -->
+    			<input type="text" name="indexUpdate[info2]" value="<%=index.info2%>"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    			<small id="emailHelp" class="form-text text-muted"></small>
+  			</div>
+		
+      </div>
+
+    </div>
+
+<div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">info3</h5>
+        <p class="card-text"></p>
+        
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">description here</label> -->
+          <input type="text" name="indexUpdate[info3]" value="<%=index.info3%>"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+    
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">update in Latest News </h5>
+        <p class="card-text"></p>
+        
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">description here</label> -->
+          <input type="text" value="<%=index.dropDownMenu%>" name="indexUpdate[dropDownMenu]"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+    
+      </div>
+
+    </div>
+
+  </div>
+
+	<div style="text-align: center;padding-top:100px">
+		<button type ="submit"style="color:orange;"class="btn btn-primary">Update</button>
+	</div>
+</form>

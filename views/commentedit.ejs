@@ -1,0 +1,28 @@
+<% include("partials1/header1") %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"></link>
+<h1 style="text-align:center;"> Edit comment <%= campgrounds_id.name %> campgrounds </h1>
+
+	
+
+
+<div class="container "style="text-align:center;">
+<div class="row">
+
+<div style="width:30%; margin:25px auto;"> 
+	  <div class="form-group">
+<form action="/campgrounds/<%= campgrounds_id %>/comments/<%=comments._id%>?_method=PUT"method="POST">
+
+		    <label for="exampleInput2">Edit a new comment</label>
+		    <input type="text" class="form-control" id="exampleInput2" aria-describedby="emailHelp" 
+		    name="comment[text]" value= "<%= comments.text %>"placeholder="Enter name of campground">
+		    <small id="emailHelp" class="form-text text-muted">We'll never share your photos with anyone else.</small>
+		    </div>
+		  
+		
+		  <button type="submit" class="btn btn-primary btn-block">Submit</button>
+
+
+</form>	    
+	
+  </div>
+<% include("partials1/footer") %>
